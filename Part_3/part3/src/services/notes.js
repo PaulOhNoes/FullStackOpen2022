@@ -1,5 +1,7 @@
 import axios from "axios";
-const baseUrl = 'http://localhost:3001/api/notes'
+// const herokuURL = 'https://cryptic-beach-44264.herokuapp.com/api/notes'
+// const baseUrl = 'http://localhost:3001/api/notes'
+const baseUrl = '/api/notes'
 
 const getAll = () => {
     const request = axios.get(baseUrl)
@@ -17,7 +19,7 @@ const update = (id, newObject) => {
 }
 
 export default {
-    getAll,
-    create,
-    update
+    getAll: getAll,
+    create: create,
+    update: update,
 }
