@@ -1,2 +1,2 @@
 # FullStackOpen2022
-Learning React, Redux, and more.
+Learning React, Redux, MongoDB, Heroku, and more
