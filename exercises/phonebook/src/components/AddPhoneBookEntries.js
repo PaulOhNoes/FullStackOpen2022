@@ -25,6 +25,7 @@ const AddPhonebookEntries = ({persons, setPersons, setNotificationMessage, setNo
             setNewNumber('')
           })
           .catch(error => {
+            console.log('Error adding existing entry', error)
             setNotificationMessageStyle('error')
             setNotificationMessage(
               `Information of ${newName} has already been removed from server`
@@ -51,6 +52,17 @@ const AddPhonebookEntries = ({persons, setPersons, setNotificationMessage, setNo
           setPersons(persons.concat(returnedPersons))
           setNewName('')
           setNewNumber('')
+        })
+        .catch(error => {
+          // console.log(`The error message`, error.response.data.error.message)
+          // console.log(`The error message`, error.response.data)
+          setNotificationMessageStyle('error')
+          setNotificationMessage(
+            `${error.response.data.error.message}`
+          )
+          setTimeout( () => {
+            setNotificationMessage(null)
+          }, 5000)
         })
       }
     }
