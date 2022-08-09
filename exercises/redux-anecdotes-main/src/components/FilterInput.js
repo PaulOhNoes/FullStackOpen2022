@@ -12,7 +12,7 @@ const FilterInput = () => {
 
   return (
     <div>
-      <h2>Phonebook</h2>
+      <h2>Filter Anecdotes</h2>
 
       <div>
           filter shown with:

@@ -1,19 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client'
-import {combineReducers} from 'redux'
 import App from './app'
 import { Provider } from 'react-redux'
-import { configureStore } from '@reduxjs/toolkit'
 
-import noteReducer, { createNote } from './reducers/noteReducer'
-import filterReducer, { filterChange } from './reducers/filterReducer'
-
-const store = configureStore({
-  reducer: {
-    notes: noteReducer,
-    filter: filterReducer
-  }
-})
+import store from './store'
 
 console.log(store)
 
